@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>筋肉相性診断 / Muscle Match Quiz | MuscleLove</title>
+    <meta name="description" content="あなたの筋肉タイプを診断！5つの質問に答えて、あなたにピッタリの筋肉タイプを見つけよう！">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen active">
+        <div class="container">
+            <div class="brand-badge">MuscleLove</div>
+            <h1 class="title-main">
+                <span class="title-ja">筋肉相性診断</span>
+                <span class="title-en">Muscle Match Quiz</span>
+            </h1>
+            <p class="subtitle">5つの質問に答えて、あなたの筋肉タイプを診断！<br>Answer 5 questions to find your muscle type!</p>
+            <div class="start-images">
+                <img src="images/img1.png" alt="" class="float-img img-1">
+                <img src="images/img4.png" alt="" class="float-img img-2">
+                <img src="images/img6.png" alt="" class="float-img img-3">
+            </div>
+            <button id="start-btn" class="btn-primary pulse-btn">
+                <span>診断スタート / START</span>
+                <span class="btn-icon">💪</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="screen">
+        <div class="container">
+            <div class="brand-badge small">MuscleLove</div>
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-text">
+                    <span id="progress-label">Question 1 / 5</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill" style="width: 20%"></div>
+                </div>
+            </div>
+
+            <!-- Question Area -->
+            <div id="question-wrapper" class="question-wrapper">
+                <div id="question-card" class="question-card">
+                    <h2 id="question-text-ja" class="question-ja"></h2>
+                    <p id="question-text-en" class="question-en"></p>
+                    <div id="choices" class="choices"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" class="screen">
+        <div class="container">
+            <div class="brand-badge small">MuscleLove</div>
+            <div class="result-card">
+                <p class="result-label">あなたの筋肉タイプは… / Your muscle type is…</p>
+                <h2 id="result-type" class="result-type"></h2>
+                <div class="result-image-wrapper">
+                    <img id="result-image" class="result-image" src="" alt="Result">
+                    <div class="result-glow"></div>
+                </div>
+                <p id="result-description" class="result-description"></p>
+                <div class="result-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">相性度 / Compatibility</span>
+                        <div class="stat-bar-wrapper">
+                            <div id="compat-bar" class="stat-bar"></div>
+                        </div>
+                        <span id="compat-value" class="stat-value"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">おすすめ / Recommended Exercise</span>
+                        <p id="result-exercise" class="stat-exercise"></p>
+                    </div>
+                </div>
+
+                <!-- Share Button -->
+                <button id="share-btn" class="btn-share">
+                    <span>結果をシェア / Share Result 📱</span>
+                </button>
+
+                <!-- Try Again -->
+                <button id="retry-btn" class="btn-secondary">
+                    <span>もう一度診断 / Try Again 🔄</span>
+                </button>
+            </div>
+
+            <!-- Patreon CTA -->
+            <div class="patreon-cta">
+                <p class="cta-text">もっと筋肉美を楽しみたい？<br>Want more muscle beauty?</p>
+                <a href="https://www.patreon.com/cw/MuscleLove" target="_blank" rel="noopener noreferrer" class="btn-patreon">
+                    <span>MuscleLove on Patreon</span>
+                    <span class="patreon-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
